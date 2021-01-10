@@ -16,9 +16,9 @@ export class FruitsComponent implements OnInit {
 
     // @ts-ignore
     this.fruits = [
-      {idFruit : 1, nomFruit: 'PC Asus', prixFruit : 3000.600, dateCreation : new Date('01/14/2011')},
-      {idFruit : 2, nomFruit: 'Imprimante Epson', prixFruit : 450, dateCreation : new Date('12/17/2010')},
-      {idFruit : 3, nomFruit: 'Tablette Samsung', prixFruit : 900.123, dateCreation: new Date('02/20/2020')}
+      {idFruit : 1, nomFruit: 'PC Asus', prixFruit : 3000.600,poidsFruit:13.0, datePaiement : new Date('01/14/2011')},
+      {idFruit : 2, nomFruit: 'Imprimante Epson', prixFruit : 450,poidsFruit:15.0, datePaiement : new Date('12/17/2010')},
+      {idFruit : 3, nomFruit: 'Tablette Samsung', prixFruit : 900.123,poidsFruit:14.0, datePaiement: new Date('02/20/2020')}
     ];
   }
   // tslint:disable-next-line:typedef
