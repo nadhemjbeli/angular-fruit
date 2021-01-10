@@ -1,28 +1,33 @@
-<p>add-fruit works!</p>
 <div class="container">
   <div>
-    <h2>Ajouter un Produit :</h2>
+    <h2>Ajouter Fruit :</h2>
   </div>
   <form >
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label >ID Produit</label>
+      <label >ID Fruit</label>
       <input type="text" [(ngModel)]="newFruit.idFruit"
-             name="idProduit" class="form-control">
+             name="idFruit" class="form-control">
     </div>
     <div class="col-sm-4 col-md-4 col-lg-4" >
-      <label >Nom Produit</label>
+      <label >Nom Fruit</label>
       <input type="text"[(ngModel)]= "newFruit.nomFruit"
-             name="nomProduit" class="form-control">
+             name="nomFruit" class="form-control">
     </div>
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label >Prix Produit</label>
+      <label >Prix Fruit</label>
       <input type="number" [(ngModel)]= "newFruit.prixFruit"
-             name="prixProduit" class="form-control">
+             name="prixFruit" class="form-control">
     </div>
     <div class="col-sm-4 col-md-4 col-lg-4">
-      <label >Date création</label>
+      <label >Poids fruit</label>
+      <input type="number" [(ngModel)]= "newFruit.poidsFruit"
+             name="poidsFruit" class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Date paiement</label>
       <input type="date" [(ngModel)]= "newFruit.datePaiement"
-             name="dateCreation" class="form-control">
+             name="datePaiement" class="form-control">
     </div>
     <div class="mt-2">
       <button type="submit" (click)="addFruit()" class="btn btn-success">Ajouter</button>

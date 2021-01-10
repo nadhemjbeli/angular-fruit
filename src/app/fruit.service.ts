@@ -29,38 +29,24 @@ export class FruitService{
   }
   // tslint:disable-next-line:typedef
   ajouterFruit( fr: Fruit): Observable<Fruit>{
-    // @ts-ignore
     return this.http.post<Fruit>(this.apiURL, fr, httpOptions);
-
   }
 
   // tslint:disable-next-line:typedef
-  supprimerFruit( fr: Fruit){
-    // supprimer le fruit fr du tableau fruits
-    const index = this.fruits.indexOf(fr, 0);
-    if (index > -1) {
-      this.fruits.splice(index, 1);
-    }
-    // ou Bien
-    /* this.fruits.forEach((cur, index) => {
-    if(fr.idFruit === cur.idFruit) {
-    this.fruits.splice(index, 1);
-    }
-    }); */
+  supprimerFruit(id: number) {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.delete(url, httpOptions);
   }
-  consulterFrui(id: number): Fruit{
-    // tslint:disable-next-line:triple-equals
-    this.fruit = this.fruits.find(f => f.idFruit == id);
-    return this.fruit;
+
+  consulterFrui(id: number): Observable<Fruit> {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.get<Fruit>(url);
   }
+
   // tslint:disable-next-line:typedef
-  updateFruit(f: Fruit)
+  updateFruit(fr: Fruit): Observable<Fruit>
   {
-  // console.log(p);
-    this.supprimerFruit(f);
-    this.ajouterFruit(f);
-    this.trierFruits();
-
+    return this.http.put<Fruit>(this.apiURL, fr, httpOptions);
   }
   // tslint:disable-next-line:typedef
   trierFruits(){

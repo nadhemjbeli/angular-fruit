@@ -21,6 +21,7 @@ export class AddFruitComponent implements OnInit {
       });
     this.router.navigate(['fruits']);
   }
+
   ngOnInit(): void {
   }
 
