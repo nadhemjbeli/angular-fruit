@@ -1,0 +1,31 @@
+<p>add-fruit works!</p>
+<div class="container">
+  <div>
+    <h2>Ajouter un Produit :</h2>
+  </div>
+  <form >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label >ID Produit</label>
+      <input type="text" [(ngModel)]="newFruit.idFruit"
+             name="idProduit" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >Nom Produit</label>
+      <input type="text"[(ngModel)]= "newFruit.nomFruit"
+             name="nomProduit" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label >Prix Produit</label>
+      <input type="number" [(ngModel)]= "newFruit.prixFruit"
+             name="prixProduit" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Date création</label>
+      <input type="date" [(ngModel)]= "newFruit.dateCreation"
+             name="dateCreation" class="form-control">
+    </div>
+    <div class="mt-2">
+      <button type="submit" (click)="addFruit()" class="btn btn-success">Ajouter</button>
+    </div>
+  </form>
+</div>
